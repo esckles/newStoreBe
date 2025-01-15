@@ -7,7 +7,13 @@ env.config();
 
 const app: Application = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://newstorefe.onrender.com",
+    methods: ["POST", "GET", "PATCH"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 mainApp(app);
 app.listen(parseInt(process.env.PORT as string), () => {
   dbConfig();

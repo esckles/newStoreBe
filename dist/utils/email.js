@@ -42,7 +42,7 @@ const createaccountEmail = (user) => __awaiter(void 0, void 0, void 0, function*
     const token = jsonwebtoken_1.default.sign({ id: user === null || user === void 0 ? void 0 : user._id }, process.env.JWT_SECRET, {
         expiresIn: process.env.JWT_EXPIRES,
     });
-    const URL_value = `http://localhost:5173/auth/login/${token}`;
+    const URL_value = `https://newstorefe.onrender.com/${token}`;
     const pathFile = path_1.default.join(__dirname, "../views/createaccount.ejs");
     const html = yield ejs_1.default.renderFile(pathFile, {
         name: user === null || user === void 0 ? void 0 : user.name,
