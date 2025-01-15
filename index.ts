@@ -12,6 +12,7 @@ app.use(
     origin: ["http://localhost:5173", "https://newstorefe.onrender.com"],
     methods: ["POST", "GET", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
   })
 );
 mainApp(app);
