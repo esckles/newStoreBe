@@ -9,7 +9,7 @@ const app: Application = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://newstorefe.onrender.com",
+    origin: ["http://localhost:5173", "https://newstorefe.onrender.com"],
     methods: ["POST", "GET", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
